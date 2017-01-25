@@ -73,7 +73,7 @@ user = mysql
 # Memory settings.
 key_buffer_size = {{ mysql_key_buffer_size }}
 max_allowed_packet = {{ mysql_max_allowed_packet }}
-{% if ansible_os_family == 'CentOS' and ansible_distribution_major_version == '5' %}
+{% if ansible_os_family == 'RedHat' and ansible_distribution_major_version == '5' %}
 #table_open_cache = {{ mysql_table_open_cache }}
 {% else %}
 table_open_cache = {{ mysql_table_open_cache }}
